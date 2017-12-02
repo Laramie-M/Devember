@@ -1,12 +1,17 @@
 package main
 
-import "fmt"
-import "bufio"
-import "os"
+import (
+	"fmt"
+	"os"
+	"bufio"
+	"strings"
+)
+
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter Text: ")
 	text, _ := reader.ReadString('\n')
+	text = strings.TrimSuffix(text,"\n")
 	isPalindrome(text)
 }
 func reverse(a string) (b string){
