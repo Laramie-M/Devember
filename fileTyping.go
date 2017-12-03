@@ -58,7 +58,7 @@ func typeCheck(head []byte) {
 
 func main() {
 	head := make([]byte,4)
-	openFile := fileOpen("\\goworkspace\\tmp\\dat")
+	openFile := fileOpen("\\tmp\\dat4")
 	defer openFile.Close()
 	_, e2 := openFile.Read(head)
 	errorCheck(e2)
